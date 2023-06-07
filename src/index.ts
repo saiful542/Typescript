@@ -150,14 +150,20 @@ const practiceGenericFunction = (myInfo: any) => {
 };
 // console.log(practiceGenericFunction('yellow'));
 
-interface custom_obj {
+interface custom_obj_type {
   name: string;
   age: number;
 }
-const getFunction = <X, Y extends keyof X>(obj: X, key: Y): any => {
-  return obj[key];
+const getFunction = <X, Y extends keyof X, Z extends keyof X>(
+  obj: X,
+  key1: Y,
+  key2: Z
+): unknown => {
+  return [obj[key1], obj[key2]];
 };
 
-const result111 = getFunction({ name: "Abir", age: 25 }, "age");
+let custom_obj: custom_obj_type = { name: "Abir", age: 25 };
+const result111 = getFunction(custom_obj, "name", "age");
 
-console.log(result111);
+// console.log(result111);
+
