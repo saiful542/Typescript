@@ -8,14 +8,28 @@ class People {
 const resultOj = new People("Abir", 25, 5.6);
 // console.log(resultOj);
 
+// inheritance
 class Student extends People {
-  constructor(name: string, age: number, height: number, public roll: number) {
+  private _roll: number = 200;
+  constructor(name: string, age: number, height: number, roll: number) {
     super(name, age, height);
-    this.roll = roll;
+  }
+  public output(): number {
+    return this.getSalary();
   }
 }
 
 const student_1 = new Student("Mr. Doctor", 18, 5.5, 12);
-console.log(student_1);
+console.log(student_1.output());
 
+class Teacher extends People {
+  constructor(name: string, age: number, height: number) {
+    super(name, age, height);
+  }
+  public getIncreamnement(): string {
+    return `${this.name}, ${this.age}`;
+  }
+}
 
+const teacher1 = new Teacher("Mr. Teacher", 28, 5.7);
+// console.log(teacher1.getIncreamnement());
