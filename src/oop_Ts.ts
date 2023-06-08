@@ -20,9 +20,10 @@ class Student extends People {
 }
 
 const student_1 = new Student("Mr. Doctor", 18, 5.5, 12);
-console.log(student_1.output());
+// console.log(student_1.output());
 
 class Teacher extends People {
+  static wife: boolean = true;  //using static properties
   constructor(name: string, age: number, height: number) {
     super(name, age, height);
   }
@@ -33,3 +34,4 @@ class Teacher extends People {
 
 const teacher1 = new Teacher("Mr. Teacher", 28, 5.7);
 // console.log(teacher1.getIncreamnement());
+// console.log(Teacher.wife);     //accessing static properties using class name
