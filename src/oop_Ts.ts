@@ -36,6 +36,8 @@ const teacher1 = new Teacher("Mr. Teacher", 28, 5.7);
 // console.log(teacher1.getIncreamnement());
 // console.log(Teacher.wife);     //accessing static properties using class name
 
+
+
 // polymorphism
 class Shape {
   getArea(): number {
