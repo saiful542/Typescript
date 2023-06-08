@@ -71,7 +71,7 @@ const employee_SE: employee = {
 
 // console.log(employee_manager, employee_SE);
 
-// special case for alis
+// special case for alias
 type operationType = (a: number, b: number) => number;
 const test = (a: number, b: number, operation: operationType) => {
   return operation(a, b);
@@ -145,7 +145,6 @@ const result11 = genericFunction<string, custom_Ob[]>("Abir", [
 
 const practiceGenericFunction = (myInfo: any) => {
   const string = "is a bad boy";
-  const newData = 103;
   return [string, myInfo];
 };
 // console.log(practiceGenericFunction('yellow'));
